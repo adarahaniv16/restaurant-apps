@@ -1,148 +1,458 @@
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
 }
 
 html,
 body,
 main {
-    width: 100%;
     height: 100%;
+    width: 100%;
+}
+
+header {
+    height: 44px;
+    padding-top: 14px;
 }
 
 body {
+    padding: 0;
+    margin: 0;
     font-family: "Cambria", sans-serif;
-    font-size: 10px;
+    display: grid;
 }
 
-h1.logo {
-    width: 100%;
-    text-align: center;
-    padding: 4%;
-    background-color: #0F044C;
-    color: #EEEEEE;
-    float: right;
-
-
+/* Navbar */
+#navbar {
+    width: 240px;
+    height: 100%;
+    padding-top: 12px;
+    position: absolute;
+    margin-top: -5px;
+    transform: translate(-250px, 0);
+    transition: transform 0.2s ease-in-out;
+    background-color: #32407B;
 }
 
-/* navbar */
-
-#nav-list {
-    width: 55%;
-    height: 30%;
-    position: fixed;
-    transform: translate(-100%, 0);
-    transition: transform 0.3s ease-in-out;
-    background-color: #9BA4B4;
-    margin-top: 16%;
-}
-
-#nav-list.open {
+#navbar.open {
     transform: translate(0, 0)
 }
 
-#nav-list ul {
-    padding: 16px;
-
-}
-
-#nav-list li {
-    padding: 8px;
+#navbar ul {
     list-style-type: none;
-
+    padding: 0 13px;
 }
 
-#nav-list li:hover {
-    background: #0F044C;
-    display: block;
-    color: #EEEEEE;
-
+#navbar li {
+    padding: 16px 0;
 }
 
-#nav-list a {
+#navbar li:hover {
+    background: #577BC1;
+    border-radius: 4px;
+}
+
+#navbar a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
-    margin: 10%;
-    padding: 2%;
+    padding: 15px 20px;
 }
 
-#dropdown {
-    font-size: 30px;
-    padding: 1.5%;
+#navbar .dropdown-title {
+    font-size: 23px;
+    padding: 18px 0;
+}
+
+.dropdown-title {
+    padding: 15px;
+    font-weight: bold;
+    margin-left: 25%;
+}
+
+.logo {
     text-decoration: none;
-    color: #EEEEEE;
+    font-weight: bold;
+    color: #32407B;
     position: absolute;
-    margin-left: 1%;
-    
+    padding: 10px;
+    top: 9px;
+    right: 15px;
+    font-size: 24px;
 }
 
-.hero img{
+#dropdown-click {
+    font-size: 32px;
+    text-decoration: none;
+    margin-left: 12px;
+    color: #32407B;
+    padding: 14px;
+}
+
+/* Skip Content */
+.skip-link {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 8px;
+    z-index: 100;
+    height: 44px;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+/* Main */
+main {
+    padding-top: 2px;
+}
+
+main h2 {
+    text-align: center;
+    margin: 65px 0 30px 0;
+    color: #32407B;
+    font-size: 22px;
+}
+
+img {
+    display: block;
+}
+
+/* Jumbotron */
+.jumbotron-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: initial;
+    padding-top: 200px;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
 }
 
+.jumbotron {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 460px;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-@media screen and (min-width: 425px) {
-    #nav-list{
-        margin-top: 14%;
-    }
-    #dropdown{
-        padding: 3%;
-        font-size: 25px;
-    }
 }
 
-@media screen and (min-width: 500px) {
-    #nav-list{
-        margin-top: 13%;
-    }
-    #dropdown{
-        font-size: 25px;
-        padding: 3%;
-    }
+/* Display */
+.wrapper {
+    margin: 15px 3%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
 }
+
+.box {
+    border-radius: 8px;
+    box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.2), 0 6px 18px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px;
+    background-color: #577BC1;
+}
+
+.box img {
+    width: 100%;
+    height: 240px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box p {
+    padding-left: 14px;
+    padding-right: 14px;
+    text-align: justify;
+}
+
+.box .namaResto {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box .location {
+    width: auto;
+    color: white;
+    background: #32407B;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.box .location b {
+    color: orange;
+}
+
+footer {
+    width: 100%;
+    background: #32407B;
+    height: 50px;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+}
+
 
 @media screen and (min-width: 600px) {
-    #nav-list{
-        margin-top: 12%;
-        transform: translate(-100%, 0);
+    body {
+        display: grid;
+        grid-template-rows: 70px auto;
     }
-    #dropdown{
-        padding: 3%;
-        font-size: 25px;
+
+    header {
+        height: 70px;
+        padding-top: 0;
+    }
+
+    #navbar {
+        width: 100%;
+        padding-top: 0;
+        margin-top: 0;
+        position: relative;
+        transform: translate(0, 0);
+    }
+
+    #navbar ul {
+        right: 0;
+        top: 4px;
+        position: absolute;
+    }
+
+    #navbar li {
+        padding: 24px 0;
+        display: inline;
+    }
+
+    #navbar li:hover {
+        background: #577BC1;
+        border-radius: 0;
+    }
+
+    #navbar a {
+        padding: 24px 20px;
+    }
+
+    .dropdown-title {
+        position: absolute;
+        left: 5%;
+        top: 0;
+        margin-left: 0;
+        padding: 16px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .jumbotron {
+        height: 460px;
+    }
+
+    .jumbotron-title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        padding-top: 30%;
+        margin-top: -3px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+
+    .wrapper {
+        margin: 20px 4%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #dropdown-click {
+        display: none;
+    }
+
+    footer {
+        width: 100%;
+        background: #32407B;
+        height: 50px;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .skip-link {
+        position: absolute;
+        left: 0;
+        top: -50px;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        padding: 8px;
+        z-index: 100;
+        height: 44px;
     }
 }
 
-@media screen and (min-width: 700px) {
-   #nav-list{
-        margin-top: 10%;
-        transform: translate(-100%, 0);
+
+@media screen and (min-width: 1000px) {
+    .dropdown-title {
+        position: absolute;
+        left: 3%;
+        top: 10;
+        margin-left: 0;
+        padding: 16px;
+
     }
-    #dropdown{
-        padding: 3%;
-        font-size: 25px;
+
+    #navbar .dropdown-title {
+        font-size: 30px;
+        padding: 30px 0;
+    }
+
+    header {
+        height: 104px;
+        padding-top: 0px;
+    }
+
+    #navbar ul {
+        right: 3%;
+        top: 4px;
+        position: absolute;
+        padding: 19px;
+    }
+
+    .wrapper {
+        margin: 10px 3%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        width: 100%;
+        background: #32407B;
+        height: 50px;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .jumbotron {
+        height: 30%;
+    }
+
+    .jumbotron-title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        padding-top: 30%;
+        margin-top: -3px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+
+    footer {
+        width: 100%;
+        background: #32407B;
+        height: 50px;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+        margin-top: 30%;
+
     }
 }
-@media screen and (min-width: 1000px) {
-    h1.logo{
+
+@media screen and (min-width: 2000px) {
+    .jumbotron {
+        height: 40%;
+    }
+    .jumbotron-title {
+        text-align: center;
+        font-size: 90px;
+        font-weight: bold;
+        padding-top: 30%;
+        margin-top: -3px;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+    header {
+        height: 170px;
+        padding-top: 0;
+    }
+    #navbar .dropdown-title {
+        font-size: 50px;
+        padding: 50px 0;
+    }
+    #navbar ul {
+        list-style-type: none;
+        padding: 53px;
+    }
+    #navbar li {
+        padding: 20px;
+    }
+    .dropdown-title {
+        padding: 15px;
+        font-weight: bold;
+        margin-left: 2%;
+    }
+
+    main h2 {
+        text-align: center;
+        margin: 65px 0 30px 0;
+        color: #32407B;
+        font-size: 45px;
+    }
+
+    .box img {
+        width: 100%;
+        height: 450px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .box p {
+        padding-left: 19px;
+        padding-right: 19px;
+        text-align: justify;
+        font-size: 25px;
+    }
+
+    .box .namaResto {
         font-size: 30px;
-            padding: 2%;
+        text-align: center;
+        font-weight: bold;
     }
-    #nav-list{
-        margin-top: 7%;
-        transform: translate(-100%, 0);
+
+    .box .location {
+        width: auto;
+        color: white;
+        background: #32407B;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-top: 0;
+        padding: 30px;
+        text-align: center;
+        font-size: 25px;
     }
-    #dropdown{
-        padding: 2%;
-        margin-left: 1%;
-        font-size: 29px;
-    }
-    #nav-list a {
-        font-size: 26px;
-    }
-    .hero img{
-        width: 100px;
+
+    footer {
+        width: 100%;
+        background: #32407B;
+        height: 100px;
+        color: white;
+        text-align: center;
+        font-size: 28px;
+        margin-top: 45%;
     }
 }
